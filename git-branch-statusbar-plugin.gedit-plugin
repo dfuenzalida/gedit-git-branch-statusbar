@@ -2,8 +2,8 @@
 Loader=python
 Module=git-branch-statusbar-plugin
 IAge=2
-Name=Git branch on status Bar
-Name[en]=Git branch on status Bar
+Name=Git branch on status bar
+Name[en]=Git branch on status bar
 Name[es]=Rama de Git en la barra de estado
 Description=Shows the Git branch of the current file on the status bar
 Description[en]=Shows the Git branch of the current file on the status bar
