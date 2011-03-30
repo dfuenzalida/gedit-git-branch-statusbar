@@ -15,3 +15,11 @@ Copy the files `git-branch-statusbar-plugin.gedit-plugin` and `git-branch-status
 
 On gedit, go to Edit > Preferences, on the Plugins tab look for *Git branch on status bar* and mark the checkbox next to it to enable the plugin.
 
+Screenshot
+----------
+
+Obligatory screenshot:
+
+![gedit screenshot with git branch on status bar](http://3.bp.blogspot.com/-1ruIgLzrxCw/TZNcp6O16LI/AAAAAAAAD4w/6am1SSNczBY/s1600/gedit-git-branch.png)
+
+On the image above, the branch name is *super-testing-branch*
