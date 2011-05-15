@@ -49,3 +49,4 @@ Obligatory screenshot:
 ![gedit screenshot with git branch on status bar](http://i.imgur.com/TY4YD.png)
 
 On the image above, the branch name is *super-improved-look-branch*
+
