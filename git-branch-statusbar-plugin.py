@@ -15,9 +15,17 @@ class GitBranchPluginHelper:
 
         # Find the status bar, add a new label to show the branch
         status_bar = window.get_statusbar()
-        self._branch_label = gtk.Label("")
-        status_bar.add(self._branch_label)
+        self._branch_label = gtk.Label(None)
+        self._branch_label.set_single_line_mode(True)
         self._branch_label.show()
+        
+        # Add a container, so the Label does not overflow the vspace of the statusbar
+        self._container = gtk.Frame(None)
+        self._container.show()
+        status_bar.pack_end(self._container, expand=False, fill=True, padding=0)
+        self._container.add(self._branch_label)
+        
+        # show all
         self.update_ui()
 
     def deactivate(self):
@@ -36,14 +44,14 @@ class GitBranchPluginHelper:
             file_path = urlparse.urlparse(document_uri).path
             # Get a Git repo reference from the file path
             repo = git.Repo(file_path)
-            label_text = repo.active_branch
+            label_text = _("Git branch: ") + repo.active_branch
         except Exception:
             pass
         except BaseException:
             pass
         finally:
             # Update the branch label
-            self._branch_label.set_text(label_text)
+            self._branch_label.set_markup(label_text)
 
 
 class GitBranchPlugin(gedit.Plugin):
