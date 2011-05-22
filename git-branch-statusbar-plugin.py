@@ -12,9 +12,7 @@ import gettext
 import os.path
 
 # Load localization messages
-# gettext.install("gedit-git-branch-statusbar", os.path.join(os.path.dirname(__file__), "locale"))
-# gettext.install("gedit-git-branch-statusbar", "/home/denis/Proyectos/gedit-git-branch-statusbar/locale")
-gettext.bindtextdomain('gedit-git-branch-statusbar', '/home/denis/Proyectos/gedit-git-branch-statusbar/locale')
+gettext.bindtextdomain('gedit-git-branch-statusbar')
 gettext.textdomain('gedit-git-branch-statusbar')
 
 # Shows the Git branch of the current file on the status bar
