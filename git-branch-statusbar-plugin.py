@@ -30,7 +30,7 @@ class GitBranchPluginHelper:
 
     def deactivate(self):
         status_bar = self._window.get_statusbar()
-        status_bar.remove(self._branch_label)
+        status_bar.remove(self._container)
         self._window = None
         self._plugin = None
         self._status_bar = None
