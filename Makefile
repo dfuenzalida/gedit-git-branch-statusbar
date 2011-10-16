@@ -3,7 +3,7 @@ PO = en es
 
 PREFIX ?= /usr
 
-FILES = git-branch-statusbar-plugin.gedit-plugin git-branch-statusbar-plugin.py
+FILES = git-branch-statusbar-plugin.plugin git-branch-statusbar-plugin.py
 
 all: po-data
 	@echo "\n\nTo install type: sudo make install"
@@ -21,6 +21,6 @@ install-po:
 	for lang in $(PO); do install -m 644 locale/$$lang/LC_MESSAGES/* $(DESTDIR)$(PREFIX)/share/locale/$$lang/LC_MESSAGES/; done
 
 install: make-install-po-dirs install-po
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/gedit-2/plugins
-	for file in $(FILES); do install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/gedit-2/plugins ; done
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/gedit/plugins
+	for file in $(FILES); do install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/gedit/plugins ; done
 
