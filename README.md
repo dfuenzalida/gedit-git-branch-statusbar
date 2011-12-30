@@ -15,7 +15,7 @@ Either download the files (using the Downloads button) and uncompress to a folde
 
 Run `sudo make install` to install.
 
-Install as a Ubuntu package
+Install as an Ubuntu package
 ------------
 
 You can add my Ubuntu PPA to add this plugin as a software package and receive updates.
