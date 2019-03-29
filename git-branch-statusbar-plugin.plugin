@@ -1,5 +1,5 @@
 [Plugin]
-Loader=python
+Loader=python3
 Module=git-branch-statusbar-plugin
 IAge=3
 Name=Git branch on status bar

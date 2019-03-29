@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 #    Gedit Git Branch On Statusbar Plugin
 #    Copyright (C) 2010-2011 Denis Fuenzalida <denis.fuenzalida@gmail.com>
 #
@@ -25,7 +25,7 @@ import git
 
 # gettext support
 import gettext
-import os.path
+import os
 
 # Load localization messages
 gettext.bindtextdomain('gedit-git-branch-statusbar')
@@ -60,8 +60,6 @@ class GitBranchPlugin(GObject.Object, Gedit.WindowActivatable):
     def do_deactivate(self):
         status_bar = self.window.get_statusbar()
 
-        # TODO: Fix removing the frame
-        # status_bar.remove(0, self._container)
         self.window = None
         self._plugin = None
         self._status_bar = None
@@ -70,8 +68,9 @@ class GitBranchPlugin(GObject.Object, Gedit.WindowActivatable):
         label_text = ""
         try:
             file_path = self.window.get_active_document().get_location().get_path()
-            repo = git.Repo(file_path)
-            label_text = _("Git branch: ") + "<i>" + repo.active_branch + "</i>"
+            dir_path = os.path.dirname(file_path)
+            repo = git.Repo(dir_path)
+            label_text = _("Git branch: ") + "<i>" + str(repo.active_branch) + "</i>"
         except Exception:
             pass
         except BaseException:

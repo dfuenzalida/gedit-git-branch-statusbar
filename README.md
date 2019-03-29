@@ -6,7 +6,7 @@ This gEdit plugin shows the git branch for the file being edited on the status b
 Requirements
 ------------
 
-On Ubuntu and Debian, just install the `python-git` and `msgfmt` packages, then install as described below.
+On Ubuntu and Debian, just install the `make`, `python3-git` and `gettext` packages, then install as described below.
 
 Install from sources
 ------------
