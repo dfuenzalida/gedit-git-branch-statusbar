@@ -69,7 +69,7 @@ class GitBranchPlugin(GObject.Object, Gedit.WindowActivatable):
         try:
             file_path = self.window.get_active_document().get_location().get_path()
             dir_path = os.path.dirname(file_path)
-            repo = git.Repo(dir_path)
+            repo = git.Repo(dir_path, search_parent_directories=True)
             label_text = _("Git branch: ") + "<i>" + str(repo.active_branch) + "</i>"
         except Exception:
             pass
