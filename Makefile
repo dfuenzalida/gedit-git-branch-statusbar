@@ -3,7 +3,7 @@ PO = en es
 
 PREFIX ?= /usr
 
-FILES = git-branch-statusbar-plugin.plugin git-branch-statusbar-plugin.py
+FILES = git-branch-statusbar-plugin.plugin git-branch-statusbar-plugin.py git-branch-icon.png
 
 all: po-data
 	@echo "\n\nTo install type: sudo make install"
