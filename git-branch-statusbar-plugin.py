@@ -49,7 +49,7 @@ class GitBranchPlugin(GObject.Object, Gedit.WindowActivatable):
         self._branch_label.show()
         
         # Add a container, so the Label does not overflow the vspace of the statusbar
-        self._container = Gtk.Box()
+        self._container = Gtk.Box(spacing=4)
         self._container.show()
         # Add an icon
         self._icon = Gtk.Image.new_from_file(os.path.dirname(__file__) + "/git-branch-icon.png")
@@ -77,7 +77,7 @@ class GitBranchPlugin(GObject.Object, Gedit.WindowActivatable):
             file_path = self.window.get_active_document().get_location().get_path()
             dir_path = os.path.dirname(file_path)
             repo = git.Repo(dir_path, search_parent_directories=True)
-            label_text = " <i>" + str(repo.active_branch) + "</i>"
+            label_text = "<i>" + str(repo.active_branch) + "</i>"
             self._icon.show()
         except Exception:
             pass
